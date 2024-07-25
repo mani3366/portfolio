@@ -630,30 +630,124 @@ footer{
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
-
-@media only screen and (max-width: 540px){
-    .featured-name{
-        font-size: 40px;
-    }
-    .project-box{
-        width: 100%;
-    }
-    .form-inputs{
+@media only screen and (max-width: 540px) {
+    .nav-menu {
+        position: fixed;
+        top: 60px; /* Adjusted for mobile */
+        left: -100%;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better visibility */
+        backdrop-filter: blur(10px); /* Less blur for mobile */
+        width: 100%;
+        min-height: 400px; /* Reduced height for mobile */
+        height: 85vh; /* Adjusted height for mobile */
+        transition: left .3s ease;
     }
-    .input-field{
+
+    .nav-menu.responsive {
+        left: 0;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .featured-name {
+        font-size: 32px; /* Reduced font size for mobile */
+    }
+
+    .featured-box {
+        flex-direction: column;
+        justify-content: center;
+        height: auto; /* Adjusted height for mobile */
+    }
+
+    .featured-text {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-content: flex-start;
+        min-height: 50vh; /* Adjusted height for mobile */
+    }
+
+    .social_icons {
+        margin-top: 1em; /* Reduced margin for mobile */
+    }
+
+    .featured-image {
+        order: 1;
+        justify-content: center;
+        min-height: 120px; /* Reduced height for mobile */
+        width: 100%;
+        margin-top: 20px; /* Adjusted margin for mobile */
+    }
+
+    .image, .image img {
+        width: 120px; /* Adjusted size for mobile */
+        height: 120px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px; /* Reduced gap for mobile */
+    }
+
+    .col {
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
-    
+
+    .about-info, .contact-info {
+        width: 100%;
+    }
+
+    .project-container {
+        justify-content: center;
+    }
+
+    .project-box {
+        width: 90%; /* Adjusted width for mobile */
+    }
+
+    .form-inputs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding and border are included in the width */
+    }
+
+    .input-field {
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding and border are included in the width */
+    }
+
+    .contact-info {
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding and border are included in the width */
+        overflow: hidden; /* Clears any overflow */
+    }
 
     .contact-info h2 {
         font-size: 1.2em;
         text-align: center;
+        margin: 0; /* Removes default margin to prevent overflow */
     }
 
     .contact-info p {
         font-size: 0.9em;
         text-align: center;
+        margin: 0; /* Removes default margin to prevent overflow */
     }
 
     .contact-info i {
